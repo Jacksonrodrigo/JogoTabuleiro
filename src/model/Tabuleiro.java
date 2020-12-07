@@ -31,12 +31,15 @@ public class Tabuleiro  {
     }
     private void embaralhaCasas() {
         Random rand = new Random();
-        for (int x = 0; x <50; x++) {
+        for (int x = 0; x < this.casas.length; x++) {
             int pos1 = rand.nextInt(this.casas.length);
             int pos2 = rand.nextInt(this.casas.length);
             Casa temp = this.casas[pos1];
             this.casas[pos1] = this.casas[pos2];
             this.casas[pos2] = temp;
+        }
+        for (int x = 0; x < casas.length; x++) {
+            this.casas[x].posicao = x + 1;
         }
     }
     public Casa getCasa(int pos) {

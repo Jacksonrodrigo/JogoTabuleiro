@@ -1,6 +1,6 @@
 package model;
 
-public class CasaNeutra implements Casa {
+public class CasaNeutra extends Casa {
 
     @Override
     public int getIncremento() {

@@ -1,6 +1,8 @@
 package model;
 
-public class Jogador {
+import java.util.Observable;
+
+public class Jogador extends Observable {
     private String nome;
     private int posicaoAtual;
 
@@ -18,12 +20,16 @@ public class Jogador {
     }
     public void avanca(int qtd) {
         this.posicaoAtual += qtd;
+        this.setChanged();
+        this.notifyObservers();
     }
 
     @Override
     public String toString() {
+
         return "Jogador: "+nome;
     }
+
 
 
 }

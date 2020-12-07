@@ -1,10 +1,8 @@
 package view;
 
-import java.util.List;
-
 import model.Casa;
-import model.CasaSorte;
 import model.CasaAzar;
+import model.CasaSorte;
 
 public class CasaView {
     public static void desenhaCasa(Casa casa, String txtJogadores) {
@@ -28,7 +26,8 @@ public class CasaView {
             System.out.println(preenche("jogadores:",' ',25));
             System.out.println(preenche(txtJogadores,' ',25));
         }
-        System.out.println(preenche("",'-', 25));
+        System.out.println(preenche("posição:"+casa.posicao,'-', 25));
+        //System.out.println(preenche("",'-', 25));
 
     }
     private static String preenche(String texto, char preenchimento, int tamanho) {

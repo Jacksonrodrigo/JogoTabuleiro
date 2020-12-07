@@ -2,12 +2,14 @@ package model;
 
 import java.util.Random;
 
-public class CasaAzar implements Casa {
+public class CasaAzar extends Casa {
     private int incremento;
 
     public CasaAzar() {
+
         Random rand = new Random();
         this.incremento = rand.nextInt(6) + 1;
+
     }
     public String getDescricao() {
         String retorno  = "pouco AZAR";
